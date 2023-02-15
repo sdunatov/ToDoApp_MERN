@@ -1,9 +1,7 @@
-const dotenv = require("dotenv").config();
 const express = require("express");
-const connectDB = require("./config/connectDB");
 const mongoose = require("mongoose");
-const ToDo = require("./models/todoModel");
 const todoRoutes = require("./routes/todoRoute")
+require('dotenv').config();
 
 const app = express();
 
@@ -16,19 +14,18 @@ app.get("/", (req, res) => {
 
 const PORT = process.env.PORT || 3001
 
-
-const startServer = async () => {
-    try {
-        await connectDB();
+mongoose.set("strictQuery", false);
+mongoose.connect(process.env.MONGO_URL)
+    .then(result => {
         app.listen(PORT, () => {
-            console.log(`Poslužitelj je na portu ${PORT}`);
+            console.log(`Posluzitelj je pokrenut na portu ${PORT}`);
         });
-    }catch(error){
-        console.log(error)
-    }
-};
+        console.log("Spojeni smo na bazu");
+    })
+    .catch(error => {
+        console.log("Greška pri spajanju", error.message);
+    }); 
 
-startServer();
 
 
  
