@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  color: #01161E;
+}
+p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #EBD8D0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 10px;
+}
+
+.toDoContainer {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  background-color: #FEFEFF;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 100px;
+  padding: 3rem 2rem;
+}
+
+.formToDo {
+  width: 100%;
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formToDo input {
+  height: 35px;
+  font-size: 1.6rem;
+  padding: 5px;
+  outline: none;
+}
+
+.formToDo button {
+  margin-left: 8px;
+  width: 15%;
+  height: 35px;
+  cursor: pointer;
+  background-color: #484349;
+  color: #ECE2D0;
+  border: none;
+  border-radius: 4px;
+}
+/*
+EBD8D0 svitila
+D3AB9E taminija
+FFFBFF bila
+
+*/
+.todo {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #ECE2D0;
+  padding: 10px;
+  margin: 7px 0;
+  border-radius: 2px;
+}
+
+.todo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5px;
+  background-color: #D56062;
+  border-radius: 2px;
+}
+
+.todoCompleted {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #ECE2D0;
+  padding: 10px;
+  margin: 7px 0;
+  border-radius: 2px;
+}
+
+.todoCompleted::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5px;
+  background-color: #8B9556;
+  border-radius: 2px;
+}
+
+.icons {
+  font-size: 1.6rem;
+}
+
+.icons > * {
+  margin-left: 7px;
+  cursor: pointer;
+}
+
+.textBetween{
+  
+  width: 100%;
+  padding-left: 420px;
+  
+}
