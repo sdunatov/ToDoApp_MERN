@@ -1,17 +1,18 @@
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import ToDoList from "./components/ToDoList";
+import React from "react";
+import Router from "./Router";
+import axios from "axios";
+import { AuthContextProvider } from "./context/AuthContext";
 
-export const URL = process.env.REACT_APP_SERVER_URL;
+axios.defaults.withCredentials = true;
+
+export const URL = process.env.MONGO_URL;
 
 function App() {
   return (
-    <div className="app">
-      <div className="toDoContainer">
-        <ToDoList />
-      </div>
-      <ToastContainer />
-    </div>
+    <AuthContextProvider>
+      <Router />
+    </AuthContextProvider>
+
   );
 }
 
