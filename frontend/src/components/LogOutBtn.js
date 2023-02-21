@@ -9,7 +9,7 @@ function LogoutBtn() {
         await axios.get("http://localhost:3001/api/auth/logout");
         getloggedIn();
     }
-    return <button onClick={logout}>Log out</button>
+    return <button className="logOutBtn" onClick={logout}>Odjavite se</button>
 
 }
 

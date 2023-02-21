@@ -26,12 +26,14 @@ function Router() {
 
             {loggedIn === false && (
                 <>
-                    <Route path="/register">
-                        <Register />
-                    </Route>
-                    <Route path="/login">
-                        <Login />
-                    </Route>
+                    <div className="app">
+                        <Route path="/register">
+                            <Register />
+                        </Route>
+                        <Route path="/login">
+                            <Login />
+                        </Route>
+                    </div>
                 </>
             )}
 

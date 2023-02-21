@@ -9,17 +9,24 @@ function Navbar() {
     const { loggedIn } = useContext(AuthContext);
 
     return (
-        <div className="authContainer">
-            {loggedIn === true && (<>
-                <Link to="/"></Link>
-                <LogoutBtn />
-            </>)}
+        <div >
+            {loggedIn === true && (
+                <>
+                    <div className="logOutContainer">
+                        <Link to="/"></Link>
+                        <LogoutBtn />
+                    </div>
+                </>)}
 
 
             {loggedIn === false && (
                 <>
-                    <Link to="/register">Register</Link>
-                    <Link to="/login">Login</Link>
+                    <div className="authContainer">
+                        <Link to="/register">Registirajte se</Link>
+                        <br></br>
+
+                        <Link to="/login">Prijavite se</Link>
+                    </div>
                 </>
             )}
         </div >

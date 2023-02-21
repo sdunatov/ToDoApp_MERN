@@ -32,18 +32,17 @@ function Register() {
     }
 
     return <div>
-        <h1>Registrirajte se</h1>
-        <form onSubmit={register}>
-            <input type="email" placeholder="email"
+        <form className="registerForm" onSubmit={register}>
+            <input className="inputForm" type="email" placeholder="Unestite Vašu e-mail adresu"
                 onChange={(e) => setEmail(e.target.value)}
                 value={email} />
-            <input type="password" placeholder="password"
+            <input className="inputForm" type="password" placeholder="Unesite Vašu lozinku"
                 onChange={(e) => setPassword(e.target.value)}
                 value={password} />
-            <input type="password" placeholder="password"
+            <input className="inputForm" type="password" placeholder="Ponovite unos lozinke"
                 onChange={(e) => setPasswordVerify(e.target.value)}
                 value={passwordVerify} />
-            <button type="submit">Registriraj se</button>
+            <button className="btnForm" type="submit">Registriraj se</button>
 
         </form>
     </div>
