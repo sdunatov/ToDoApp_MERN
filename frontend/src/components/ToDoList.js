@@ -5,7 +5,6 @@ import Select from './Select';
 import ToDoForm from './ToDoForm'
 import Date from './Date';
 import axios from 'axios'
-import SelectFilter from './SelectFilter';
 
 
 const ToDoList = () => {
@@ -213,7 +212,7 @@ const ToDoList = () => {
             )}
             <div>
                 <p>Prikaži zadatke iz kategorije:</p>
-                <SelectFilter options={optionsFilter} value={optionsFilter.value} onChange={handleSelectFilterChange} />
+                <Select options={optionsFilter} value={optionsFilter.value} onChange={handleSelectFilterChange} />
             </div>
         </div>
     )
