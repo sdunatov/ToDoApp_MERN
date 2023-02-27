@@ -7,6 +7,7 @@ import Date from './Date';
 import axios from 'axios'
 
 
+
 const ToDoList = () => {
     const [toDos, setToDos] = useState([])
     const [completedtoDo, setCompletedToDo] = useState([])
@@ -212,7 +213,7 @@ const ToDoList = () => {
             )}
             <div>
                 <p>Prikaži zadatke iz kategorije:</p>
-                <Select options={optionsFilter} value={optionsFilter.value} onChange={handleSelectFilterChange} />
+                <Select options={optionsFilter} value={formData.category} onChange={handleSelectFilterChange} />
             </div>
         </div>
     )
